@@ -10,7 +10,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
               <Image src="/vercel.svg" alt="Logo" width={32} height={32} />
-              <span className="text-xl font-semibold text-foreground">
+              <span className="text-xl font-semibold text-black">
                 UndeepFaked
               </span>
             </Link>

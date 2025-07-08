@@ -1,6 +1,11 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
 import UploadWidget from "@/components/UploadWidget";
+import {
+  HiOutlineBolt,
+  HiOutlineCheckCircle,
+  HiOutlineChartBar,
+} from "react-icons/hi2";
 
 export default function Home() {
   return (
@@ -11,7 +16,7 @@ export default function Home() {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-black tracking-tight">
               Detect Deepfakes with Confidence
             </h1>
             <p className="mt-4 text-xl text-gray-600 max-w-2xl mx-auto">
@@ -32,27 +37,29 @@ export default function Home() {
                 title: "Instant Analysis",
                 description:
                   "Get authenticity results in seconds with our optimized AI detection system",
-                icon: "⚡",
+                icon: HiOutlineBolt,
               },
               {
                 title: "High Accuracy",
                 description:
                   "State-of-the-art AI models ensure reliable deepfake detection",
-                icon: "🎯",
+                icon: HiOutlineCheckCircle,
               },
               {
                 title: "Multiple Formats",
                 description:
                   "Support for images, videos, and audio content analysis",
-                icon: "📊",
+                icon: HiOutlineChartBar,
               },
             ].map((feature, index) => (
               <div
                 key={index}
                 className="p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow"
               >
-                <div className="text-3xl mb-4">{feature.icon}</div>
-                <h3 className="text-lg font-semibold text-foreground">
+                <div className="text-3xl mb-4">
+                  <feature.icon className="w-8 h-8 text-gray-700" />
+                </div>
+                <h3 className="text-lg font-semibold text-black">
                   {feature.title}
                 </h3>
                 <p className="mt-2 text-gray-600">{feature.description}</p>
